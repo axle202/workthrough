@@ -180,9 +180,7 @@ $('.empathySentenceSubmit').click(function(e) {
 
 function buildEmpathySentence(){
 
-    console.log(situationText);
-    console.log(selectedFeelingsText);
-    console.log(selectedNeedsText);
+    var empathySentence = situationText + selectedFeelingsText + selectedNeedsText;
 
 
     if(initialChoice == "Happy"){
@@ -199,15 +197,25 @@ function buildEmpathySentence(){
       $('.sadEmpathySentence .selectedNeedsText').html( selectedNeedsText );
     }
 
-var entries = [
+if (localStorage.getItem('entries')){
+    var entries = JSON.parse(localStorage.getItem('entries'));
+    entries.push({date: Date.now(), text: empathySentence})
+}
+else{
+    var entries = [
     {
-        date: '12132423234',
-        text: 'The sentence'
+        date: Date.now(),
+        text: empathySentence
     }
 ];
+}
 
+localStorage.setItem('entries', JSON.stringify(entries));
 
 }
+
+
+
 
 
 
