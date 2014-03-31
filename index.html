@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Your description goes here">
+        <meta name="keywords" content="one, two, three">
+
+        <title>WorkThough</title>
+
+        <!-- external CSS link -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    </head>
+    <body>
+            <section class="staticContent">
+                <!--Home Page Content-->
+                <div class="homeContent">
+                    <h1>How are you feeling right now?</h1>
+                </div>
+                <!--Happy Life Situation Content-->
+                <div class="happySituationContent">
+                    <h1>What situation is currently making life wonderful for you?</h1>
+                </div>
+                <!--Sad Life Situation Content-->
+                <div class="sadSituationContent">
+                    <h1>What situation is currently not making life wonderful for you?</h1>
+                </div>
+                <div>
+                    <p class="userSituation">
+                        <!-- [userLifeSituation] here -->
+                        Your Situation:
+                    </p>
+                </div>
+                <div class="userFeelings">
+                    <p class="userFeelingsSentence">Your Feelings: </p>
+                    <!-- [userFeelingsChoices] here -->
+                    <hr/>
+                </div>
+                <!--[happyEmpathySentence] OR [sadEmpathySentence]-->
+                <div class="selfEmpathy">
+
+                   <p class='happyEmpathySentence'> Because of <span class='situationText'></span> you were feeling <span class='selectedFeelingsText'></span> because your need for  <span class='selectedNeedsText'></span>is being met?</p>
+
+                   <p class='sadEmpathySentence'> Because of <span class='situationText'></span> you were feeling <span class='selectedFeelingsText'></span> because your need for  <span class='selectedNeedsText'></span>is not being met?</p>
+
+                </div>
+                <div class="empathySuccess">
+                    <p>
+                        You have successfully empathized with yourself!
+                    </p>
+                    <p>
+                        Great Job! :)
+                    </p>
+                </div>
+            </section>
+
+            <section class="userInput">
+                <!--Home Page User Input-->
+                <div class="homeInput">
+                    <a href="#">
+                    <div id="Happy" class="initialHappy" >
+                        <p class="homeHappy">Happy</p>
+                        <img src="http://placehold.it/100x100" alt= "Happy">
+                    </div>
+                    </a>
+                    <a href="#">
+                    <div id="Sad" class="initialSad">
+                        <p class="homeSad" >Sad</p>
+                        <img src="http://placehold.it/100x100" alt= "Sad">
+                    </div>
+                    </a>
+                </div>
+                <!--User Happy Feeling Input-->
+                <div class="feelingsInput" id="happyFeelingInput">
+                    <div class="joyful" data-feeling="joyful">
+                        <p>Joyful</p>
+                        <img src="http://placehold.it/100x100" alt= "Joyful">
+                    </div>
+                    <div class="excited" data-feeling="excited">
+                        <p>Excited</p>
+                        <img src="http://placehold.it/100x100" alt= "Excited">
+                    </div>
+                    <div class="hopeful" data-feeling="hopeful">
+                        <p>Hopeful</p>
+                        <img src="http://placehold.it/100x100" alt= "Hopeful">
+                    </div>
+                </div>
+                <!--User Sad Feeling Input-->
+                <div class="feelingsInput" id="sadFeelingInput">
+                    <div class="annoyed" data-feeling="annoyed">
+                        <p>Annoyed</p>
+                        <img src="http://placehold.it/100x100" alt= "Annoyed">
+                    </div>
+                    <div class="tense" data-feeling="tense">
+                        <p>Tense</p>
+                        <img src="http://placehold.it/100x100" alt= "Tense">
+                    </div>
+                    <div class="angry" data-feeling="angry">
+                        <p>Angry</p>
+                        <img src="http://placehold.it/100x100" alt= "Angry">
+                    </div>
+                </div>
+                <!--User Needs Input-->
+                <div class="needsInput">
+                    <div class="connection" data-need="connection">
+                        <p>Connection</p>
+                        <img src="http://placehold.it/100x100" alt= "Connection">
+                    </div>
+                    <div class="peace" data-need="peace">
+                        <p>Peace</p>
+                        <img src="http://placehold.it/100x100" alt= "Peace">
+                    </div>
+                    <div class="trust" data-need="trust">
+                        <p>Trust</p>
+                        <img src="http://placehold.it/100x100" alt= "Trust">
+                    </div>
+                 </div>
+            </section>
+
+            <section class="userButtons">
+                <!--User Happy Situation Submit and Back Buttons-->
+                    <form = class="userHappySubmit" id="userSituationInput">
+                        <input type="text" value="Type Your Situation Here" name="situationText" maxlength="140">
+                        <button class="showFeelings" type="submit">Submit</button>
+                        <button class="backButton" type="back">Back</button>
+                    </form>
+                <!--User Sad Situation Submit and Back Buttons-->
+                    <form = class="userSadSubmit" id="userSituationInput">
+                        <input type="text" value="Type Your Situation Here" name="situationText" maxlength="140">
+                        <button class="showFeelings" type="submit">Submit</button>
+                        <button class="backButton" type="back">Back</button>
+                    </form>
+                <!--User Happy Feeling Submit and Back Buttons-->
+                    <form = class="userHappyFeelingsSubmit" id="userSituationInput">
+                        <button class="feelingsSubmit" type="submit">Submit</button>
+                        <button class="backButton" type="back">Back</button>
+                    </form>
+
+                <!--User Sad Feeling Submit and Back Buttons-->
+                    <form = class="userSadFeelingsSubmit" id="userSituationInput">
+                        <button class="feelingsSubmit" type="submit">Submit</button>
+                        <button class="backButton" type="back">Back</button>
+                    </form>
+
+                <!--User Needs Submit and Back Buttons-->
+                    <form = class="userNeedsSubmit" id="userSituationInput">
+                        <button class="needsSubmit" type="submit">Submit</button>
+                        <button class="backButton" type="back">Back</button>
+                    </form>
+
+                <!--[happyEmpathySentence] OR [sadEmpathySentence]-->
+                <div class="selfEmpathy">
+                    <button class="empathySentenceSubmit" type="Submit">YES!</button>
+                    <button class="empathyCoach" type="Submit">Get Support from Empathy Coach</button>
+                    <button class="backButton" type="Back">Back</button>
+                </div>
+                <!--Self-Empathy Log-->
+                <div class="selfEmpathyLog">
+                    <button class="selfEmpathyLogSubmit" type="Submit">View Self-Empathy Log</button>
+                    <button class="backButton" type="Back">Back</button>
+                </div>
+            </section>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
