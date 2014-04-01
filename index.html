@@ -40,9 +40,9 @@
                 <!--[happyEmpathySentence] OR [sadEmpathySentence]-->
                 <div class="selfEmpathy">
 
-                   <p class='happyEmpathySentence'> Because of <span class='situationText'></span> you were feeling <span class='selectedFeelingsText'></span> because your need for  <span class='selectedNeedsText'></span>is being met?</p>
+                   <p class='happyEmpathySentence'> <span class='situationText'></span> brings up feelings of <span class='selectedFeelingsText'></span> because my need for  <span class='selectedNeedsText'></span>is being met?</p>
 
-                   <p class='sadEmpathySentence'> Because of <span class='situationText'></span> you were feeling <span class='selectedFeelingsText'></span> because your need for  <span class='selectedNeedsText'></span>is not being met?</p>
+                   <p class='sadEmpathySentence'> <span class='situationText'></span> brings up feelings of <span class='selectedFeelingsText'></span> because my need for  <span class='selectedNeedsText'></span>is not being met?</p>
 
                 </div>
                 <div class="empathySuccess">
@@ -73,36 +73,39 @@
                 </div>
                 <!--User Happy Feeling Input-->
                 <div class="feelingsInput" id="happyFeelingInput">
-                    <div class="joyful" data-feeling="joyful">
-                        <p>Joyful</p>
+                    <p>Click up to 3 feelings that arise because of your situation</p>
+                    <div class="joyful" data-feeling="joy">
+                        <p>Joy</p>
                         <img src="http://placehold.it/100x100" alt= "Joyful">
                     </div>
-                    <div class="excited" data-feeling="excited">
-                        <p>Excited</p>
+                    <div class="excited" data-feeling="excitement">
+                        <p>Excitement</p>
                         <img src="http://placehold.it/100x100" alt= "Excited">
                     </div>
-                    <div class="hopeful" data-feeling="hopeful">
-                        <p>Hopeful</p>
+                    <div class="hopeful" data-feeling="hope">
+                        <p>Hope</p>
                         <img src="http://placehold.it/100x100" alt= "Hopeful">
                     </div>
                 </div>
                 <!--User Sad Feeling Input-->
                 <div class="feelingsInput" id="sadFeelingInput">
-                    <div class="annoyed" data-feeling="annoyed">
-                        <p>Annoyed</p>
+                    <p>Click up to 3 feelings that arise because of your situation</p>
+                    <div class="annoyed" data-feeling="annoyance">
+                        <p>Annoyance</p>
                         <img src="http://placehold.it/100x100" alt= "Annoyed">
                     </div>
-                    <div class="tense" data-feeling="tense">
-                        <p>Tense</p>
+                    <div class="tense" data-feeling="tension">
+                        <p>Tension</p>
                         <img src="http://placehold.it/100x100" alt= "Tense">
                     </div>
-                    <div class="angry" data-feeling="angry">
-                        <p>Angry</p>
+                    <div class="angry" data-feeling="anger">
+                        <p>Anger</p>
                         <img src="http://placehold.it/100x100" alt= "Angry">
                     </div>
                 </div>
                 <!--User Needs Input-->
                 <div class="needsInput">
+                    <p>Click up to 3 needs that arise because of your feelings.</p>
                     <div class="connection" data-need="connection">
                         <p>Connection</p>
                         <img src="http://placehold.it/100x100" alt= "Connection">
@@ -121,13 +124,13 @@
             <section class="userButtons">
                 <!--User Happy Situation Submit and Back Buttons-->
                     <form = class="userHappySubmit" id="userSituationInput">
-                        <input type="text" value="Type Your Situation Here" name="situationText" maxlength="140">
+                        <input type="text" autofocus placeholder="Type Your Situation Here" name="situationText" maxlength="140">
                         <button class="showFeelings" type="submit">Submit</button>
                         <button class="backButton" type="back">Back</button>
                     </form>
                 <!--User Sad Situation Submit and Back Buttons-->
                     <form = class="userSadSubmit" id="userSituationInput">
-                        <input type="text" value="Type Your Situation Here" name="situationText" maxlength="140">
+                        <input type="text" autofocus placeholder="Type Your Situation Here" name="situationText" maxlength="140">
                         <button class="showFeelings" type="submit">Submit</button>
                         <button class="backButton" type="back">Back</button>
                     </form>

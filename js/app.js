@@ -180,15 +180,16 @@ $('.empathySentenceSubmit').click(function(e) {
 
 function buildEmpathySentence(){
 
-    var empathySentence = situationText + selectedFeelingsText + selectedNeedsText;
+    var userSituation =  situationText;
+    var userFeelings = selectedFeelingsText;
+    var userNeeds = selectedNeedsText;
+    var entries;
 
 
     if(initialChoice == "Happy"){
       $('.happyEmpathySentence .situationText').html( situationText );
       $('.happyEmpathySentence .selectedFeelingsText').html( selectedFeelingsText );
       $('.happyEmpathySentence .selectedNeedsText').html( selectedNeedsText );
-
-
     }
 
     else{
@@ -197,15 +198,16 @@ function buildEmpathySentence(){
       $('.sadEmpathySentence .selectedNeedsText').html( selectedNeedsText );
     }
 
-if (localStorage.getItem('entries')){
-    var entries = JSON.parse(localStorage.getItem('entries'));
-    entries.push({date: Date.now(), text: empathySentence})
+if (entries = JSON.parse(localStorage.getItem('entries'))){
+    entries.push({date: Date.now(), situation: userSituation, feelings: userFeelings, needs: userNeeds })
 }
 else{
-    var entries = [
+    entries = [
     {
         date: Date.now(),
-        text: empathySentence
+        situation: userSituation,
+        feelings: userFeelings,
+        needs: userNeeds
     }
 ];
 }
@@ -215,6 +217,13 @@ localStorage.setItem('entries', JSON.stringify(entries));
 }
 
 
+$('.selfEmpathyLogSubmit').click(function(e) {
+    e.preventDefault();
+
+    var entries = JSON.parse(localStorage.getItem('entries'));
+
+    entries.for
+});
 
 
 
