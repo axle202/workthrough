@@ -75,6 +75,10 @@ $('.feelingsSubmit').click(function(e) {
 
     var $selected = $('.selected');
     $('.userFeelings').append( $selected );
+    var brTag = "<br>";
+    $('.userFeelings').append(brTag);
+    var hrTag = "<hr/>";
+    $('.userFeelings').append(hrTag);
     $('.feelingsInput').hide();
     $('.userSadFeelingsSubmit').hide();
     $('.userHappyFeelingsSubmit').hide();

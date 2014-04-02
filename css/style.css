@@ -86,7 +86,10 @@ body {
     margin: 0 auto;
     text-align: left;
 }
+.userFeelings, .selected div{
+    margin-bottom: 5px;
 
+}
 .userFeelings{
     display: none;
     width: 50%;
@@ -95,6 +98,9 @@ body {
 }
 
 hr{
+clear: both;
+}
+br{
     clear:both;
 }
 
@@ -122,6 +128,7 @@ hr{
 .userFeelingsSentence{
     text-align: left;
 }
+
 
 .empathySuccess{
     display: none;
