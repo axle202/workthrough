@@ -59,6 +59,7 @@ body {
 /*******************************************/
 
 .homeContent{
+    display: none ;
     padding-top: 80px;
     width: 50%;
     margin: 0 auto;
@@ -86,6 +87,22 @@ body {
     margin: 0 auto;
     text-align: left;
 }
+
+.passToBuddyContent{
+    display: none;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.passToUserContent{
+    display: none;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
 .userFeelings, .selected div{
     margin-bottom: 5px;
 
@@ -139,8 +156,24 @@ br{
 
 /* userInput */
 
-.homeInput{
+.userNameInput{
     display: ;
+    width: 50%;
+    height: 50%;
+    margin-top: 100px;
+    margin-bottom: 5px;
+
+}
+.empathyBuddyInput{
+    display: none;
+    width: 50%;
+    height: 50%;
+    margin-top: 100px;
+    margin-bottom: 5px;
+}
+
+.homeInput{
+    display:none;
     width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -170,20 +203,39 @@ br{
     margin:0 0;
 }
 
-.situationInput{
-    display: none;
-    width: 50%;
-    margin: 0 auto;
-}
-
 .feelingsInput{
     display: none;
-    width: 50%;
+    width: 240px;
+    height: 350px;
     margin: 0 auto;
     text-align: center;
+    overflow: auto;
 }
 
-.joyful{
+.affection{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.confident{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.engaged{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.inspired{
     float: left;
     display: inline;
     text-align: center;
@@ -199,14 +251,7 @@ br{
     margin: 0 auto;
 }
 
-.hopeful{
-    float: left;
-    display: inline;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-}
-.calm{
+.exhilarated{
     float: left;
     display: inline;
     text-align: center;
@@ -214,7 +259,7 @@ br{
     margin: 0 auto;
 }
 
-.annoyed{
+.gratitude{
     float: left;
     display: inline;
     text-align: center;
@@ -222,30 +267,118 @@ br{
     margin: 0 auto;
 }
 
-.tense{
+.hope{
     float: left;
     display: inline;
     text-align: center;
     width: 50%;
     margin: 0 auto;
 }
-
-.angry{
+.joy{
     float: left;
     display: inline;
     text-align: center;
     width: 50%;
     margin: 0 auto;
 }
-
-.confuse{
+.refreshed{
     float: left;
     display: inline;
     text-align: center;
     width: 50%;
     margin: 0 auto;
 }
-
+.agitation{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.annoyance{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.anger{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.aversion{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.confusion{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.distant{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.embarrassment{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.fatigue{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.insecurity{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.pain{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.sadness{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.regret{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.tension{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
 
 .feelingsInput, .needsInput div:hover {
     cursor: pointer;
@@ -257,10 +390,11 @@ br{
 
 .needsInput{
     display: none;
-    width: 50%;
+    width: 240px;
+    height: 350px;
     margin: 0 auto;
     text-align: center;
-    clear: both;
+    overflow: auto;
 }
 
 .connection{
@@ -271,6 +405,36 @@ br{
     margin: 0 auto;
 }
 
+.honesty{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.independence{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.meaning{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+.play{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
 .peace{
     float: left;
     display: inline;
@@ -278,16 +442,7 @@ br{
     width: 50%;
     margin: 0 auto;
 }
-
-.trust{
-    float: left;
-    display: inline;
-    text-align: center;
-    width: 50%;
-    margin: 0 auto;
-}
-
-.play{
+.wellbeing{
     float: left;
     display: inline;
     text-align: center;
@@ -296,6 +451,22 @@ br{
 }
 
 /* userSubmit */
+
+.userNameSubmitButton{
+    display:;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.empathyBuddySubmitButton{
+    display:none;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
 
 .userHappySubmit{
     display: none;
@@ -323,6 +494,21 @@ button{
     display: block;
     width: 100%;
     margin: 5px 0;
+    text-align: center;
+    padding: 5px;
+}
+.passToBuddySubmit{
+    display: none;
+    width: 25%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
+
+.passToUserSubmit{
+    display: none;
+    width: 25%;
+    margin: 0 auto;
     text-align: center;
     padding: 5px;
 }

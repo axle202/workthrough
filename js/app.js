@@ -1,3 +1,5 @@
+var userName;
+var empathyBuddy;
 var initialChoice;
 var situationText;
 var selectedFeelings;
@@ -6,6 +8,37 @@ var selectedFeelingsText;
 var selectedNeedsText;
 
 
+$(".userNameInput").keyup(function(e){
+    e.preventDefault();
+
+    userName = $( this ).val();
+});
+
+$('.userNameSubmitButton').click(function(e) {
+    e.preventDefault();
+
+    $('.userNameSubmit').hide();
+    $('.empathyBuddyInput').show();
+    $('.empathyBuddySubmitButton').show();
+});
+
+$(".empathyBuddyInput").keyup(function(e){
+    e.preventDefault();
+
+    empathyBuddy = $( this ).val();
+});
+
+$('.empathyBuddySubmitButton').click(function(e) {
+    e.preventDefault();
+
+    $('.empathyBuddySubmit').hide();
+    $('.homeContent').show();
+    $('.homeInput').show();
+
+    $('span.userName').append(userName);
+    $('span.empathyBuddy').append(empathyBuddy);
+
+});
 
 $('.initialHappy').click(function(e) {
     e.preventDefault();
@@ -37,12 +70,12 @@ function initialSadChoice(){
     $('.userSadSubmit').show();
 };
 
-$("input").keyup(function(e){
+
+$(".userHappyInput, .userSadInput").keyup(function(e){
     e.preventDefault();
 
     situationText = $( this ).val();
 });
-
 
 $('.showFeelings').click(function(e) {
     e.preventDefault();
@@ -50,12 +83,29 @@ $('.showFeelings').click(function(e) {
     if(initialChoice == "Happy"){
         $('.happySituationContent').hide();
         $('.userHappySubmit').hide();
-        $('#happyFeelingInput').show();
-        $('.userHappyFeelingsSubmit').show();
+        $('.passToBuddyContent').show();
+        $('.passToBuddySubmit').show();
     }
     else {
         $('.sadSituationContent').hide();
         $('.userSadSubmit').hide();
+        $('.passToBuddyContent').show();
+        $('.passToBuddySubmit').show();
+    }
+});
+
+$('.passToBuddySubmit').click(function(e) {
+    e.preventDefault();
+
+    if(initialChoice == "Happy"){
+        $('.passToBuddyContent').hide();
+        $('.passToBuddySubmit').hide();
+        $('#happyFeelingInput').show();
+        $('.userHappyFeelingsSubmit').show();
+    }
+    else {
+        $('.passToBuddyContent').hide();
+        $('.passToBuddySubmit').hide();
         $('#sadFeelingInput').show();
         $('.userSadFeelingsSubmit').show();
     }
@@ -89,6 +139,22 @@ $('.feelingsSubmit').click(function(e) {
 
 $('.needsSubmit').click(function(e) {
     e.preventDefault();
+
+    $('.userSituation').hide();
+    $('.userFeelings').hide();
+    $('.feelingsInput').hide();
+    $('.needsInput').hide();
+    $('.userNeedsSubmit').hide();
+    $('.passToUserContent').show();
+    $('.passToUserSubmit').show();
+});
+
+$('.passToUserSubmit').click(function(e) {
+    e.preventDefault();
+
+    $('.passToUserContent').hide();
+    $('.passToUserSubmit').hide();
+
 
     selectedFeelings = $('.userFeelings .selected')
     selectedNeeds = $('.needsInput .selected')
@@ -157,11 +223,7 @@ $('.needsSubmit').click(function(e) {
 
     buildEmpathySentence();
 
-    $('.userSituation').hide();
-    $('.userFeelings').hide();
-    $('.feelingsInput').hide();
-    $('.needsInput').hide();
-    $('.userNeedsSubmit').hide();
+
 
     if(initialChoice == "Happy"){
 
@@ -173,12 +235,24 @@ $('.needsSubmit').click(function(e) {
 
 });
 
+
+$('.startOverButton').click(function(e) {
+    e.preventDefault();
+
+        $('.selfEmpathy').hide();
+        $( ".selected" ).remove();
+        $( "hr" ).remove();
+        $( "br" ).remove();
+        $('.homeContent').show();
+        $('.homeInput').show();
+});
+
 $('.empathySentenceSubmit').click(function(e) {
     e.preventDefault();
 
         $('.selfEmpathy').hide();
         $('.empathySuccess').show();
-        $('.selfEmpathyLog').show();
+        /*$('.selfEmpathyLog').show();*/
 
 });
 

@@ -16,7 +16,7 @@
             <section class="staticContent">
                 <!--Home Page Content-->
                 <div class="homeContent">
-                    <h1>How are you feeling right now?</h1>
+                    <h1> Hello <span class='userName'></span>, how are you feeling right now?</h1>
                 </div>
                 <!--Happy Life Situation Content-->
                 <div class="happySituationContent">
@@ -28,25 +28,36 @@
                 </div>
                 <div>
                     <p class="userSituation">
-                        <!-- [userLifeSituation] here -->
-                        Your Situation:
+                <!-- [userLifeSituation] here -->
+                        <span class='userName'></span>'s Situation:
+                    </p>
+                </div>
+                <div class="passToBuddyContent">
+                    <p>
+                        Ok thanks, now it's time for <span class='empathyBuddy'></span> to guess your feelings and needs.
                     </p>
                 </div>
                 <div class="userFeelings">
-                    <p class="userFeelingsSentence">Your Feelings: </p>
-                    <!-- [userFeelingsChoices] here -->
+                    <p class="userFeelingsSentence">Feelings Guesses: </p>
+                <!-- [userFeelingsChoices] here -->
                 </div>
+
+                <div class="passToUserContent">
+                    <p>
+                        Thanks <span class='empathyBuddy'></span>, now send it back over to <span class='userName'></span>.
+                    </p>
+                </div>
+
                 <!--[happyEmpathySentence] OR [sadEmpathySentence]-->
                 <div class="selfEmpathy">
+                   <p class='happyEmpathySentence'> <span class='situationText'></span> triggers feelings of <span class='selectedFeelingsText'></span> because your need for  <span class='selectedNeedsText'></span>is being met?</p>
 
-                   <p class='happyEmpathySentence'> <span class='situationText'></span> brings up feelings of <span class='selectedFeelingsText'></span> because my need for  <span class='selectedNeedsText'></span>is being met?</p>
-
-                   <p class='sadEmpathySentence'> <span class='situationText'></span> brings up feelings of <span class='selectedFeelingsText'></span> because my need for  <span class='selectedNeedsText'></span>is not being met?</p>
+                   <p class='sadEmpathySentence'> <span class='situationText'></span> triggers feelings of <span class='selectedFeelingsText'></span> because your need for  <span class='selectedNeedsText'></span>is not being met?</p>
 
                 </div>
                 <div class="empathySuccess">
                     <p>
-                        You have successfully empathized with yourself!
+                        <span class='empathyBuddy'></span> successfully empathized with <span class='userName'></span>!
                     </p>
                     <p>
                         Great Job! :)
@@ -70,109 +81,196 @@
                     </div>
                     </a>
                 </div>
+
                 <!--User Happy Feeling Input-->
                 <div class="feelingsInput" id="happyFeelingInput">
-                    <p>Select up to 3 feelings that arise because of your situation</p>
-                    <div class="joyful" data-feeling="joy">
-                        <p>Joy</p>
-                        <img src="http://placehold.it/100x100" alt= "Joyful">
+                    <p>Guess up to 3 feelings that <span class='userName'></span> may be experiencing because of the situation above.</p>
+                    <div class="affection" data-feeling="affection">
+                        <p>Affection</p>
+                        <img src="http://placehold.it/100x100" alt= "affection">
                     </div>
-                    <div class="excited" data-feeling="excitement">
-                        <p>Excitement</p>
-                        <img src="http://placehold.it/100x100" alt= "Excited">
+                    <div class="confident" data-feeling="confident">
+                        <p>Confident</p>
+                        <img src="http://placehold.it/100x100" alt= "Confident">
                     </div>
-                    <div class="hopeful" data-feeling="hope">
+                    <div class="engaged" data-feeling="engaged">
+                        <p>Engaged</p>
+                        <img src="http://placehold.it/100x100" alt= "Engaged">
+                    </div>
+                    <div class="inspired" data-feeling="inspired">
+                        <p>Inspired</p>
+                        <img src="http://placehold.it/100x100" alt= "Inspired">
+                    </div>
+                    <div class="excited" data-feeling="excited">
+                        <p>Excited</p>
+                        <img src="http://placehold.it/100x100" alt= "excited">
+                    </div>
+                    <div class="exhilarated" data-feeling="exhilarated">
+                        <p>Exhilarated</p>
+                        <img src="http://placehold.it/100x100" alt= "Exhilarated">
+                    </div>
+                    <div class="gratitude" data-feeling="gratitude">
+                        <p>Gratitude</p>
+                        <img src="http://placehold.it/100x100" alt= "gratitude">
+                    </div>
+                    <div class="hope" data-feeling="hope">
                         <p>Hope</p>
-                        <img src="http://placehold.it/100x100" alt= "Hopeful">
+                        <img src="http://placehold.it/100x100" alt= "hope">
                     </div>
-                    <div class="calm" data-feeling="calm">
-                        <p>Calm</p>
-                        <img src="http://placehold.it/100x100" alt= "Calm">
+                    <div class="joy" data-feeling="joy">
+                        <p>Joy</p>
+                        <img src="http://placehold.it/100x100" alt= "Joy">
+                    </div>
+                    <div class="peace" data-feeling="peace">
+                        <p>Peace</p>
+                        <img src="http://placehold.it/100x100" alt= "Peace">
+                    </div>
+                    <div class="refreshed" data-feeling="refreshed">
+                        <p>Refreshed</p>
+                        <img src="http://placehold.it/100x100" alt= "Refreshed">
                     </div>
                 </div>
                 <!--User Sad Feeling Input-->
                 <div class="feelingsInput" id="sadFeelingInput">
-                    <p>Select up to 3 feelings that arise because of your situation</p>
-                    <div class="annoyed" data-feeling="annoyance">
-                        <p>Annoyance</p>
-                        <img src="http://placehold.it/100x100" alt= "Annoyed">
+                    <p>Guess up to 3 feelings that <span class='userName'></span> may be experiencing because of the situation above.</p>
+                    <div class="agitation" data-feeling="agitation">
+                        <p>Agitation</p>
+                        <img src="http://placehold.it/100x100" alt= "agitation">
                     </div>
-                    <div class="tense" data-feeling="tension">
-                        <p>Tension</p>
-                        <img src="http://placehold.it/100x100" alt= "Tense">
+                    <div class="annoyance" data-feeling="annoyance">
+                        <p>annoyance</p>
+                        <img src="http://placehold.it/100x100" alt= "annoyance">
                     </div>
-                    <div class="angry" data-feeling="anger">
+                    <div class="anger" data-feeling="anger">
                         <p>Anger</p>
-                        <img src="http://placehold.it/100x100" alt= "Angry">
+                        <img src="http://placehold.it/100x100" alt= "anger">
                     </div>
-                    <div class="confuse" data-feeling="confuse">
+                    <div class="aversion" data-feeling="aversion">
+                        <p>Aversion</p>
+                        <img src="http://placehold.it/100x100" alt= "aversion">
+                    </div>
+                    <div class="confusion" data-feeling="confusion">
                         <p>Confusion</p>
-                        <img src="http://placehold.it/100x100" alt= "confuse">
+                        <img src="http://placehold.it/100x100" alt= "confusion">
+                    </div>
+                    <div class="distant" data-feeling="distant">
+                        <p>Distant</p>
+                        <img src="http://placehold.it/100x100" alt= "distant">
+                    </div>
+                    <div class="embarrassment" data-feeling="embarrassment">
+                        <p>Embarrassment</p>
+                        <img src="http://placehold.it/100x100" alt= "embarrassment">
+                    </div>
+                    <div class="fatigue" data-feeling="fatigue">
+                        <p>Fatigue</p>
+                        <img src="http://placehold.it/100x100" alt= "fatigue">
+                    </div>
+                    <div class="insecurity" data-feeling="insecurity">
+                        <p>Insecurity</p>
+                        <img src="http://placehold.it/100x100" alt= "insecurity">
+                    </div>
+                    <div class="pain" data-feeling="pain">
+                        <p>Pain</p>
+                        <img src="http://placehold.it/100x100" alt= "pain">
+                    </div>
+                    <div class="sadness" data-feeling="sadness">
+                        <p>Sadness</p>
+                        <img src="http://placehold.it/100x100" alt= "Sadness">
+                    </div>
+                    <div class="regret" data-feeling="regret">
+                        <p>Regret</p>
+                        <img src="http://placehold.it/100x100" alt= "regret">
+                    </div>
+                    <div class="tension" data-feeling="tension">
+                        <p>Tension</p>
+                        <img src="http://placehold.it/100x100" alt= "tension">
                     </div>
                 </div>
                 <!--User Needs Input-->
                 <div class="needsInput">
-                    <p>Select up to 3 needs that arise because of your feelings.</p>
+                    <p>Guess up to 3 needs that may be important to <span class='userName'></span> in this situation.</p>
                     <div class="connection" data-need="connection">
                         <p>Connection</p>
                         <img src="http://placehold.it/100x100" alt= "Connection">
+                    </div>
+                    <div class="honesty" data-need="honesty">
+                        <p>Honesty</p>
+                        <img src="http://placehold.it/100x100" alt= "honesty">
+                    </div>
+                    <div class="independence" data-need="independence">
+                        <p>Independence</p>
+                        <img src="http://placehold.it/100x100" alt= "independence">
+                    </div>
+                    <div class="meaning" data-need="meaning">
+                        <p>Meaning</p>
+                        <img src="http://placehold.it/100x100" alt= "meaning">
                     </div>
                     <div class="peace" data-need="peace">
                         <p>Peace</p>
                         <img src="http://placehold.it/100x100" alt= "Peace">
                     </div>
-                    <div class="trust" data-need="trust">
-                        <p>Trust</p>
-                        <img src="http://placehold.it/100x100" alt= "Trust">
-                    </div>
                     <div class="play" data-need="play">
                         <p>Play</p>
                         <img src="http://placehold.it/100x100" alt= "play">
+                    </div>
+                    <div class="wellbeing" data-need="wellbeing">
+                        <p>Wellbeing</p>
+                        <img src="http://placehold.it/100x100" alt= "wellbeing">
                     </div>
                  </div>
             </section>
 
             <section class="userButtons">
+                <!--User Name Submit-->
+                    <form class="userNameSubmit">
+                        <input class= "userNameInput" type="text" autofocus placeholder="What's your name?" name="nameText">
+                        <button class="userNameSubmitButton" type="submit">Submit</button>
+                    </form>
+                <!--Empathy Buddy Submit-->
+                    <form class="empathyBuddySubmit">
+                        <input class= "empathyBuddyInput" type="text" autofocus placeholder="What's your Empathy Buddy's Name?" name="nameText">
+                        <button class="empathyBuddySubmitButton" type="submit">Submit</button>
+                    </form>
                 <!--User Happy Situation Submit and Back Buttons-->
                     <form = class="userHappySubmit" id="userSituationInput">
-                        <input type="text" autofocus placeholder="Type Your Situation Here" name="situationText" maxlength="140">
+                        <input class= "userHappyInput" type="text" autofocus placeholder="Type Your Situation Here" name="situationText" maxlength="140">
                         <button class="showFeelings" type="submit">Submit</button>
-                        <button class="backButton" type="back">Back</button>
                     </form>
                 <!--User Sad Situation Submit and Back Buttons-->
-                    <form = class="userSadSubmit" id="userSituationInput">
-                        <input type="text" autofocus placeholder="Type Your Situation Here" name="situationText" maxlength="140">
+                    <form class="userSadSubmit" id="userSituationInput">
+                        <input class= "userSadInput"  type="text" autofocus placeholder="Type Your Situation Here" name="situationText" maxlength="140">
                         <button class="showFeelings" type="submit">Submit</button>
-                        <button class="backButton" type="back">Back</button>
+                    </form>
+                    <!--Pass Control to Empathy Buddy-->
+                    <form class="passToBuddyButton">
+                        <button class="passToBuddySubmit" type="submit">OK</button>
                     </form>
                 <!--User Happy Feeling Submit and Back Buttons-->
                     <form = class="userHappyFeelingsSubmit" id="userSituationInput">
                         <button class="feelingsSubmit" type="submit">Submit</button>
-                        <button class="backButton" type="back">Back</button>
                     </form>
 
                 <!--User Sad Feeling Submit and Back Buttons-->
                     <form = class="userSadFeelingsSubmit" id="userSituationInput">
                         <button class="feelingsSubmit" type="submit">Submit</button>
-                        <button class="backButton" type="back">Back</button>
                     </form>
 
                 <!--User Needs Submit and Back Buttons-->
                     <form = class="userNeedsSubmit" id="userSituationInput">
                         <button class="needsSubmit" type="submit">Submit</button>
-                        <button class="backButton" type="back">Back</button>
                     </form>
-
+                <!--Pass Control back to User-->
+                    <form class="passToUserButton">
+                        <button class="passToUserSubmit" type="submit">OK</button>
+                    </form>
                 <!--[happyEmpathySentence] OR [sadEmpathySentence]-->
                 <div class="selfEmpathy">
                     <button class="empathySentenceSubmit" type="Submit">YES!</button>
-                    <button class="empathyCoach" type="Submit">Get Support from Empathy Coach</button>
-                    <button class="backButton" type="Back">Back</button>
+                    <button class="startOverButton" type="back">Start Over</button>
                 </div>
                 <!--Self-Empathy Log-->
                 <div class="selfEmpathyLog">
                     <button class="selfEmpathyLogSubmit" type="Submit">View Self-Empathy Log</button>
-                    <button class="backButton" type="Back">Back</button>
                 </div>
             </section>
 
@@ -180,7 +278,11 @@
     </body>
 </html>
 
+<!--<button class="empathyCoach" type="Submit">Get Support from Empathy Coach</button>
 
+<button class="backButton" type="back">Back</button>
+
+-!>
 
 
 
