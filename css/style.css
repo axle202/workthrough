@@ -206,6 +206,13 @@ br{
     width: 50%;
     margin: 0 auto;
 }
+.calm{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
 
 .annoyed{
     float: left;
@@ -230,6 +237,15 @@ br{
     width: 50%;
     margin: 0 auto;
 }
+
+.confuse{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
 
 .feelingsInput, .needsInput div:hover {
     cursor: pointer;
@@ -264,6 +280,14 @@ br{
 }
 
 .trust{
+    float: left;
+    display: inline;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.play{
     float: left;
     display: inline;
     text-align: center;
